@@ -6,11 +6,13 @@ namespace Tyuiu.RyabtsevNE.Sprint2.Task7.V2.Lib
     {
         public bool CheckDotInShadedArea(double x, double y)
         {
-            bool res;
-            if ((Math.Pow(x, 2) + Math.Pow(y, 2) <= 1) && ((y >= (x / 2)) && (x >= -1) && (x <= 1)) && ((y >= -1) && (y <= 1))) res = true;
-            else res = false;
-
-            return res;
-        }
+            if ((y <= ((double)(x / 2))) && ((Math.Pow(x, 2) + Math.Pow(y, 2)) <= 1))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
     }
 }
